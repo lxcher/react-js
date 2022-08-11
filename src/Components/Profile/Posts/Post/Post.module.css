@@ -1,0 +1,12 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMDxZqmJ9bLkldZVCMavlKUPJGt-U7pAdPw&usqp=CAU");
+    background-size: cover;
+    border-radius: 50%;
+}

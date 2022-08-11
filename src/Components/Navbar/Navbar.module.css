@@ -1,0 +1,19 @@
+.nav {
+    grid-area: n;
+    padding: 10px;
+    background-color: plum;
+}
+
+.item a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.item.active a {
+    color: yellow;
+}
+
+.item a{
+    text-decoration: none;
+}
