@@ -8,12 +8,9 @@
     font-weight: bold;
     text-transform: uppercase;
     color: black;
-}
-
-.item.active a {
-    color: yellow;
-}
-
-.item a{
     text-decoration: none;
+}
+
+.item a.active {
+    color: yellow;
 }
