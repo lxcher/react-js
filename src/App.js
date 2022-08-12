@@ -3,13 +3,12 @@ import Header from './Components/Header/Header'
 import Navbar from './Components/Navbar/Navbar'
 import Profile from './Components/Profile/Profile'
 import Dialogs from "./Components/Profile/Dialogs/Dialogs";
-import style from "./Components/Profile/Profile.module.css";
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from "react-router-dom";
-import Settings from "./Components/Profile/Settings/Settings";
+import Settings from "./Components/Settings/Settings";
 import News from "./Components/Profile/News/News";
 
 function App() {
