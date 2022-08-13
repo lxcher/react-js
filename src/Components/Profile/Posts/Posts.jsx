@@ -3,11 +3,10 @@ import Post from "./Post/Post";
 import NewPost from "./NewPost/NewPost";
 
 
-const Posts = () => {
+const Posts = (props) => {
     return <div className={style.posts}>
         <NewPost />
-        <Post message='Hi, Alex!' likesCount='23'/>
-        <Post message='How are you?' likesCount='13' />
+        {props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)}
     </div>
 }
 

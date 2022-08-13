@@ -4,11 +4,12 @@
     padding: 10px;
 }
 
-.item a {
-    text-decoration: none;
-    font-weight: bold;
+.messages {
+    display: flex;
+    flex-direction: column;
 }
 
-.item a.active {
-    color: yellow;
+.messages textarea,
+.messages button {
+    max-width: 30%;
 }
