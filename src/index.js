@@ -1,12 +1,11 @@
 import './index.css';
-import state from './redux/state'
+import store from './redux/store'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import {addNewPost, updateNewPostText, subscribe} from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,13 +13,15 @@ const rerenderEntireTree = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App {...state} addNewPost={addNewPost} updateNewPostText={updateNewPostText}/>
+                <App state={state}
+                     dispatch={store.dispatch.bind(store)}
+                />
             </BrowserRouter>
         </React.StrictMode>
     );
 }
-rerenderEntireTree(state)
+rerenderEntireTree(store.getState())
 
-subscribe(rerenderEntireTree)
+store.subscribe(rerenderEntireTree)
 
 reportWebVitals();
