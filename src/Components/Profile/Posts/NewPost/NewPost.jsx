@@ -1,14 +1,15 @@
 import React from "react";
 import style from './NewPost.module.css'
+import {addNewPostTextActionCreator, updateNewPostTextActionCreator} from "../../../../redux/store";
 
 
 const NewPost = (props) => {
     const newPostElement = React.createRef()
     const addNewPost = () => {
-        props.dispatch({type: 'ADD-POST'})
+        props.dispatch(addNewPostTextActionCreator())
     }
     const onPostChange = () => {
-        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', text: newPostElement.current.value})
+        props.dispatch(updateNewPostTextActionCreator(newPostElement.current.value))
     }
     return <div className={style.newPost}>
         <textarea onChange={onPostChange} value={props.newPostText} ref={newPostElement}></textarea>
