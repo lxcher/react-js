@@ -12,7 +12,7 @@ const NewPost = (props) => {
         props.dispatch(updateNewPostTextActionCreator(newPostElement.current.value))
     }
     return <div className={style.newPost}>
-        <textarea onChange={onPostChange} value={props.newPostText} ref={newPostElement}></textarea>
+        <textarea onChange={onPostChange} ref={newPostElement}></textarea>
         <button onClick={addNewPost}>ADD POST</button>
     </div>
 }
