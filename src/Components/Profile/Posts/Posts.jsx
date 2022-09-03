@@ -1,15 +1,15 @@
 import style from './Posts.module.css'
 import Post from "./Post/Post";
-import NewPost from "./NewPost/NewPost";
+import NewPostContainer from "./NewPost/NewPostContainer";
 
 
 const Posts = (props) => {
+    let state = props.store.getState()
     return <div className={style.posts}>
-        <NewPost
-            newPostText={props.newPostText}
-            dispatch={props.dispatch}
+        <NewPostContainer
+            store={props.store}
         />
-        {props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)}
+        {state.profilePage.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)}
     </div>
 }
 
