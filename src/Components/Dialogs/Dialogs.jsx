@@ -13,12 +13,12 @@ const Dialogs = (props) => {
     }
     return <div className={style.dialogs}>
         <div className={style.dialogsItems}>
-            {props.state.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>)}
+            {props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>)}
         </div>
         <div className={style.messages}>
-            {props.state.dialogsPage.messages.map(m => <Message message={m.message}/>)}
+            {props.dialogsPage.messages.map(m => <Message message={m.message}/>)}
             {<textarea
-             value={props.state.dialogsPage.newMessageText}
+             value={props.dialogsPage.newMessageText}
              onChange={onNewMessageChange}
              ref={newMessageElement}></textarea>}
             <button onClick={addNewMessage}>ADD MESSAGE</button>
