@@ -39,7 +39,7 @@
 .avatar {
     width: 80px;
     height: 80px;
-    background: url("https://html5css.ru/w3images/avatar2.png") no-repeat center;
+    background: no-repeat center;
     background-size: cover;
 }
 

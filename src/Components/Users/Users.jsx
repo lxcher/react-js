@@ -1,13 +1,18 @@
 import UsersItem from "./UsersItem/UsersItem";
+import * as axios from 'axios'
 
 
 const Users = (props) => {
+    if (props.usersPage.users.length === 0) {
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+            .then(response => props.setUsers(response.data.items))
+    }
     return <div>
         {props.usersPage.users.map(u => <UsersItem
-            fullName={u.fullName}
+            name={u.name}
             status={u.status}
             id={u.id}
-            location={u.location}
+            avatar={u.photos.small}
             followed={u.followed}
             follow={props.follow}
             unfollow={props.unfollow}
